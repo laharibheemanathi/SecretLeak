@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(139, 108, 255, 0.16), transparent 50%),
+    radial-gradient(900px 400px at 100% 0%, rgba(99, 102, 241, 0.12), transparent 45%),
+    #07080c;
+  font-family: Sora, "Segoe UI", sans-serif;
+}
+
+code, .font-mono {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+.card {
+  @apply rounded-2xl border border-white/10 bg-ink-800/80 shadow-card backdrop-blur-sm;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-violet/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent-violet to-accent-indigo px-4 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:brightness-110 disabled:opacity-50;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-slate-200 transition hover:bg-white/10 disabled:opacity-50;
+}
